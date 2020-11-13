@@ -102,26 +102,29 @@ for j in range(2,5):
          btn[i].grid(row = j, column=q, pady=1)
          btn[i] ["command"] = lambda x = numberpad [i]: added_value.numberEnter(x)
          i +=1
+
+
+commonargs={'width':6, 'height':2,'font':('arial', 20, 'bold' ), 'bg':"powder blue", 'bd':4}
 #===========================================================================================================================
-btnCE=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text="CE", command = added_value.Clear_All_Entry)).grid(row = 1, column=0, pady=1)
+btnCE=(Button(calc,**commonargs,text="CE", command = added_value.Clear_All_Entry)).grid(row = 1, column=0, pady=1)
 
-btnC=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text="C", command = added_value.Clear_Entry)).grid(row = 1, column=1, pady=1)
+btnC=(Button(calc, **commonargs,text="C", command = added_value.Clear_Entry)).grid(row = 1, column=1, pady=1)
 
-btnSqRoot=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text="√", command = added_value.Square_Root)).grid(row = 1, column=2, pady=1)
+btnSqRoot=(Button(calc, **commonargs,text="√", command = added_value.Square_Root)).grid(row = 1, column=2, pady=1)
 #=====================================================================================Operators====================================
-btnAdd=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=chr(43),command=lambda: added_value.operation("add"))).grid(row = 1, column=3, pady=1)
+btnAdd=(Button(calc, **commonargs,text=chr(43),command=lambda: added_value.operation("add"))).grid(row = 1, column=3, pady=1)
 
-btnSub=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=chr(45),command=lambda: added_value.operation("sub"))).grid(row = 2, column=3, pady=1)
+btnSub=(Button(calc, **commonargs,text=chr(45),command=lambda: added_value.operation("sub"))).grid(row = 2, column=3, pady=1)
 
-btnMulti=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=chr(42),command=lambda: added_value.operation("multi"))).grid(row = 3, column=3, pady=1)
+btnMulti=(Button(calc, **commonargs,text=chr(42),command=lambda: added_value.operation("multi"))).grid(row = 3, column=3, pady=1)
 
-btnDiv=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=chr(247),command=lambda: added_value.operation("divide"))).grid(row = 4, column=3, pady=1)
+btnDiv=(Button(calc, **commonargs,text=chr(247),command=lambda: added_value.operation("divide"))).grid(row = 4, column=3, pady=1)
 #=====================================================================================Row 5=====================================
-btn0=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text="0", command=lambda: added_value.numberEnter(0))).grid(row = 5, column=0, pady=1)
+btn0=(Button(calc, **commonargs,text="0", command=lambda: added_value.numberEnter(0))).grid(row = 5, column=0, pady=1)
 
-btnDot=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=".",command=lambda: added_value.numberEnter("."))).grid(row = 5, column=1, pady=1)
+btnDot=(Button(calc, **commonargs,text=".",command=lambda: added_value.numberEnter("."))).grid(row = 5, column=1, pady=1)
 
-btnPM=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text=chr(177), command = added_value.MathsPM)).grid(row = 5, column=2, pady=1)
+btnPM=(Button(calc, **commonargs,text=chr(177), command = added_value.MathsPM)).grid(row = 5, column=2, pady=1)
 
-btnEquals=(Button(calc, width=6, height=2,font = ('arial', 20, 'bold' ), bg="powder blue", bd=4,text="=",command = added_value.sum_of_total)).grid(row = 5, column=3, pady=1)
+btnEquals=(Button(calc, **commonargs,text="=",command = added_value.sum_of_total)).grid(row = 5, column=3, pady=1)
 root.mainloop()                           
